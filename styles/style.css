@@ -1,0 +1,20 @@
+.video-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 2px solid black;
+    margin-bottom: 2em;
+}
+
+.video-wrapper div.info {
+    width: 5rem;
+    word-wrap: break-word;
+}
+
+.video-wrapper div.info {
+    width: 40%;
+}
+
+.video-wrapper div.preview {
+    text-align: center;
+}
