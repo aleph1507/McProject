@@ -1,5 +1,47 @@
 [
     {
+        "name": "cloudconvert/cloudconvert-php",
+        "version": "2.2.1",
+        "version_normalized": "2.2.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/cloudconvert/cloudconvert-php.git",
+            "reference": "f417a751eeb4ecda0ee367222752a20286052442"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/cloudconvert/cloudconvert-php/zipball/f417a751eeb4ecda0ee367222752a20286052442",
+            "reference": "f417a751eeb4ecda0ee367222752a20286052442",
+            "shasum": ""
+        },
+        "require": {
+            "guzzlehttp/guzzle": "6.*"
+        },
+        "require-dev": {
+            "clue/phar-composer": "~1.0",
+            "phpdocumentor/phpdocumentor": "2.*",
+            "phpunit/phpunit": "4.0.*",
+            "squizlabs/php_codesniffer": "1.*"
+        },
+        "time": "2019-03-13T18:39:34+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "CloudConvert\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "authors": [
+            {
+                "name": "Josias Montag",
+                "email": "josias@montag.info"
+            }
+        ],
+        "description": "PHP Wrapper for CloudConvert APIs",
+        "homepage": "https://github.com/cloudconvert/cloudconvert-php"
+    },
+    {
         "name": "firebase/php-jwt",
         "version": "v5.0.0",
         "version_normalized": "5.0.0.0",

@@ -40,6 +40,10 @@ class ComposerStaticInita8605443446c8906a07f6d5bbb25a5a3
         array (
             'Firebase\\JWT\\' => 13,
         ),
+        'C' => 
+        array (
+            'CloudConvert\\' => 13,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -82,6 +86,10 @@ class ComposerStaticInita8605443446c8906a07f6d5bbb25a5a3
         'Firebase\\JWT\\' => 
         array (
             0 => __DIR__ . '/..' . '/firebase/php-jwt/src',
+        ),
+        'CloudConvert\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/cloudconvert/cloudconvert-php/src',
         ),
     );
 

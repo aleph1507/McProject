@@ -56,11 +56,8 @@ class GoogleController
         return $domain_permission;
     }
 
-//    public function upload_file($name, $path, $service, $folder, $name_on_drive = '')
     public function upload_file(File $file, $folder = '1T2rgFxsIOfCZnsH_eIwudMcNfWrC059i')
     {
-//        if ($file->name === '') $name_on_drive = date("d/m/Y H:i:s") . '_' . $name;
-//        $this->drive_service = $this->drive_service;
         $fileMetadata = new \Google_Service_Drive_DriveFile(array(
             'name' => date("d/m/Y H:i:s") . '_' . $file->getName(),
             'parents' => array($folder)
@@ -70,7 +67,7 @@ class GoogleController
             'data' => $content,
             'mimeType' => 'video/*',
             'uploadType' => 'multipart',
-            'fields' => 'id, webViewLink, thumbnailLink, thumbnailVersion'
+            'fields' => 'id, webViewLink'
         ));
         $this->add_domain_permissions($this->getService(), $file->id);
         return $file;

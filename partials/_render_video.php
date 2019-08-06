@@ -5,6 +5,7 @@
         <br> Thumbnail: <?= $file->thumbnailLink ?>
     </div>
     <div class="preview">
-        <video width="40%" src="<?= $file->webContentLink; ?>" controls></video>
+<!--        <video width="40%" src="< $file->webContentLink; ?>" controls></video>-->
+        <iframe src="<?= str_replace('/view', '/preview', $file->webViewLink); ?>" frameborder="0"></iframe>
     </div>
 </div>
