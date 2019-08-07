@@ -35,5 +35,7 @@ foreach ($files as $file)
 }
 ?>
 
+<script src="js/script.js"></script>
+
 </body>
 </html>

@@ -77,7 +77,7 @@ class GoogleController
     public function list_files(array $opts = ['folder' => '1S59NjV-gRtV2NFhSpw_TDzIQZMJtqDJ9', 'pageToken' => null])
     {
         $optParams = array(
-            'pageSize' => 2,
+            'pageSize' => 6,
 //            'fields' => "nextPageToken, files(contentHints/thumbnail,fileExtension,iconLink,id,name,size,thumbnailLink,webContentLink,webViewLink,mimeType,parents)",
             'fields' => "nextPageToken, files(contentHints/thumbnail,fileExtension,iconLink,id,name,size,thumbnailLink,webContentLink,webViewLink,mimeType,parents)",
             //'pageToken' => $opts['pageToken'],
