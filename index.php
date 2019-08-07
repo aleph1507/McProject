@@ -22,7 +22,7 @@ $files = $files['files'];
 <body>
 
 <form action="upload/File_Upload.php" method="POST" enctype="multipart/form-data">
-    <input type="file" name="video_file" value="Upload" accept="video/*"><br>
+    <input type="file" name="video_file" value="Upload" accept="video/*,.3gp,.webm,.mov"><br>
     <input type="submit">
 </form>
 <br><hr><br>
