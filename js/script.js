@@ -9,15 +9,15 @@ createDriveIframe = function(dataSrc) {
     return iframe;
 };
 
-createVideoNode = function(dataSrc) {
-    let video = document.createElement('video');
-    video.setAttribute('width', '40%');
-    video.setAttribute('src', dataSrc);
-    video.setAttribute('controls', '');
-    video.appendChild(document.createTextNode('Your browser does support video'));
-
-    return video;
-};
+// createVideoNode = function(dataSrc) {
+//     let video = document.createElement('video');
+//     video.setAttribute('width', '40%');
+//     video.setAttribute('src', dataSrc);
+//     video.setAttribute('controls', '');
+//     video.appendChild(document.createTextNode('Your browser does support video'));
+//
+//     return video;
+// };
 
 setIframesOnLoad = function(previewDivs) {
     // let previewDivs = document.getElementsByClassName('preview');
@@ -26,8 +26,8 @@ setIframesOnLoad = function(previewDivs) {
     console.log('previewDivs: ', previewDivs);
     for(let i = 0; i<previewDivs.length; i++) {
         console.log('previewDivs[i]: ', previewDivs[i], ' i: ' + i);
-        // previewDivs[i].appendChild(createDriveIframe(previewDivs[i].getAttribute('data-src')));
-        previewDivs[i].appendChild(createVideoNode(previewDivs[i].getAttribute('data-src')));
+        previewDivs[i].appendChild(createDriveIframe(previewDivs[i].getAttribute('data-src')));
+        // previewDivs[i].appendChild(createVideoNode(previewDivs[i].getAttribute('data-src')));
     }
     console.log('~setIframesOnLoad');
 };
