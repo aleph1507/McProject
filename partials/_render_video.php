@@ -6,6 +6,7 @@
     </div>
     <div class="preview">
 <!--        <video width="40%" src="< $file->webContentLink; ?>" controls></video>-->
-        <iframe src="<?= str_replace('/view', '/preview', $file->webViewLink); ?>" frameborder="0"></iframe>
+        <iframe target="_parent" src="<?= str_replace('/view', '/preview', $file->webViewLink); ?>" frameborder="0"></iframe>
+	<!--<iframe src="<?= $file->webViewLink; ?>" frameborder="0"></iframe> -->
     </div>
 </div>

@@ -19,10 +19,10 @@ class GoogleController
         }
     }
 
-    private function setup_google_drive_client(string $impersonate = 'hristo@digital-orange.com')
+    private function setup_google_drive_client(string $impersonate = 'meet@gwcworld.com')
     {
         $this->client = new \Google_Client();
-        $this->client->setApplicationName('McTube');
+        $this->client->setApplicationName('MCTube');
         $this->client->useApplicationDefaultCredentials();
         $this->client->setSubject($impersonate);
         $this->client->addScope("https://www.googleapis.com/auth/drive");
@@ -56,7 +56,7 @@ class GoogleController
         return $domain_permission;
     }
 
-    public function upload_file(File $file, $folder = '1T2rgFxsIOfCZnsH_eIwudMcNfWrC059i')
+    public function upload_file(File $file, $folder = '1S59NjV-gRtV2NFhSpw_TDzIQZMJtqDJ9')
     {
         $fileMetadata = new \Google_Service_Drive_DriveFile(array(
             'name' => date("d/m/Y H:i:s") . '_' . $file->getName(),
@@ -74,13 +74,13 @@ class GoogleController
     }
 
 //    public function list_files(string $folder = '1T2rgFxsIOfCZnsH_eIwudMcNfWrC059i', $pageToken = null)
-    public function list_files(array $opts = ['folder' => '1T2rgFxsIOfCZnsH_eIwudMcNfWrC059i', 'pageToken' => null])
+    public function list_files(array $opts = ['folder' => '1S59NjV-gRtV2NFhSpw_TDzIQZMJtqDJ9', 'pageToken' => null])
     {
         $optParams = array(
-            'pageSize' => 10,
+            'pageSize' => 2,
 //            'fields' => "nextPageToken, files(contentHints/thumbnail,fileExtension,iconLink,id,name,size,thumbnailLink,webContentLink,webViewLink,mimeType,parents)",
             'fields' => "nextPageToken, files(contentHints/thumbnail,fileExtension,iconLink,id,name,size,thumbnailLink,webContentLink,webViewLink,mimeType,parents)",
-            'pageToken' => $opts['pageToken'],
+            //'pageToken' => $opts['pageToken'],
             'q' => "'". $opts['folder'] ."' in parents"
         );
 
